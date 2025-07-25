@@ -1,15 +1,14 @@
 ---
 import Defualt from '../layouts/default.astro';
 import HeroBanner from "../components/shared/hero_banner.astro";
-import HeroBannerImage from "../../public/hero_banners/sy_london_youthacks_logo.png";
+import HeroBannerImage from "../../public/images/coolashack5.jpg";
+import Card from "../components/UI_components/eventscard.astro"
 ---
 
 <Defualt tab_title="Events - Youthacks">
-    <HeroBanner image_path={HeroBannerImage.src} />
+    <HeroBanner image_path={HeroBannerImage.src} text="<Events>"/>
     <section id="event-section" class="events">
         <div class="container">
-            <h1>Events</h1>
-            <h2>Coming soon! Check out our main page for events we've done.</h2>
         </div>
     </section>
 </Layout></p>
