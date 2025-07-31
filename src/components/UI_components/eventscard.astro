@@ -1,11 +1,12 @@
 ---
 const { img_path = "" } = Astro.props;
+const { logo = "" } = Astro.props
 ---
 
 
 <style>
     .container {
-      display: block;
+      display: flex;
       min-height: inherit;
       margin: 2em;
       /*border: 3px solid #a49898;*/
@@ -13,6 +14,11 @@ const { img_path = "" } = Astro.props;
       overflow: hidden;
       box-shadow: 8px 8px 36px 0px rgba(0, 0, 0, 0.3);
       padding: 2em ;
+      /* background-image:url({img_path}); */
+      background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
      
     }
     .container:hover {
@@ -21,20 +27,18 @@ const { img_path = "" } = Astro.props;
     .container :global(.wrapper) {
       height: inherit;
     }
-    .container :global(div img) {
-      width: 100%;
-      object-fit: cover;
-      height: 35vh;
-      display: flex;
-      margin: auto;
-  
-      border-radius: 18px;
-    }
   
     .container :global(h2) {
       font-family: "Atkinson Hyperlegible", sans-serif;
       font-weight: 600;
       font-style: normal;
+    }
+
+    .container :global(h1) {
+      font-family: "Atkinson Hyperlegible", sans-serif;
+      font-style: normal;
+      color:white;
+      font-size: 3em;
     }
     .container :global(h3) {
       font-family: "Atkinson Hyperlegible", sans-serif;
@@ -45,6 +49,11 @@ const { img_path = "" } = Astro.props;
       font-family: "Atkinson Hyperlegible", sans-serif;
       font-weight: 400;
       font-style: normal;
+    }
+    .container :global(.logo){
+      width: 30%;
+      height: auto;
+      padding: 2em;
     }
     /* .container :global(a) {
       display: flex;
@@ -69,8 +78,8 @@ const { img_path = "" } = Astro.props;
     } */
   </style>
   
-  <div class="container">
-    <img class="bgimg" src = {img_path}>
+  <div class="container" style={`background-image: url('${img_path}')`}>
+    <img src={logo} class="logo">
     <slot />
   </div>
   

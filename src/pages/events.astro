@@ -2,8 +2,26 @@
 import Defualt from '../layouts/default.astro';
 import HeroBanner from "../components/shared/hero_banner.astro";
 import HeroBannerImage from "../../public/images/coolashack5.jpg";
-import Card from "../components/UI_components/eventscard.astro"
+
+// components
+import Card from "../components/UI_components/eventscard.astro";
+
+// Card Backgrounds
+import CoolAsHack from "../../public/images/coolashackbg.png";
+import Daydream from "../../public/images/clean-bg-with-clouds.png";
+import Scrapyard from "../../public/images/scrapyard-bg.png";
+import Counterspell from "../../public/images/counterspell-bg.png";
+
+// Logos
+import CoolAsHackLogo from  "../../public/images/logos/coolashack.png";
+import DaydreamCambridgeLogo from "../../public/images/logos/daydreamcambridge.png";
+import DaydreamBrightonLogo from "../../public/images/logos/daydreambrighton.png";
+import DaydreamLondonLogo from "../../public/images/logos/daydreamlondon.png";
+import ScrapyardCambridgeLogo from "../../public/images/logos/scrapyardcambridge.png";
+import ScrapyardLondonLogo from "../../public/images/logos/scrapyardlondon.png";
+import CounterspellLogo from "../../public/images/logos/counterspell.png";
 ---
+
 
 <Defualt tab_title="Events - Youthacks">
     <HeroBanner image_path={HeroBannerImage.src} text="<Events>"/>
@@ -11,14 +29,28 @@ import Card from "../components/UI_components/eventscard.astro"
         <div class="container">
         <h1>Our Past Events</h1>
         </div>
-        <Card>Counterspell Cambridge</Card>
-        <Card>Scrapyard London</Card>
-        <Card>Scrapyard Cambridge</Card>
-        <Card>Cool as Hack</Card>
+        <Card img_path={Counterspell.src} logo={CounterspellLogo.src}>
+            <h1>Counterspell Cambridge</h1>
+        </Card>
+        <Card img_path={Scrapyard.src} logo={ScrapyardLondonLogo.src}>
+            <h1>Scrapyard London</h1>
+        </Card>
+        <Card img_path={Scrapyard.src} logo={ScrapyardCambridgeLogo.src}>
+            <h1>Scrapyard Cambridge</h1>
+        </Card>
+        <Card img_path={CoolAsHack.src} logo={CoolAsHackLogo.src}>
+            <h1>Cool as Hack</h1>
+        </Card>
         <h1>Upcoming events</h1>
-        <Card>Daydream Cambridge</Card>
-        <Card>Daydream London</Card>
-        <Card>Daydream Brighton</Card>
+        <Card img_path={Daydream.src} logo={DaydreamCambridgeLogo.src}>
+            <h1>Daydream Cambridge</h1>
+        </Card>
+        <Card img_path={Daydream.src} logo={DaydreamLondonLogo.src}>
+            <h1>Daydream London</h1>
+        </Card>
+        <Card img_path={Daydream.src} logo={DaydreamBrightonLogo.src}>
+            <h1>Daydream Brighton</h1>
+        </Card>
     </section>
 </Layout></p>
 
