@@ -1,15 +1,92 @@
 ---
 import Defualt from '../layouts/default.astro';
 import HeroBanner from "../components/shared/hero_banner.astro";
-import HeroBannerImage from "../../public/hero_banners/sy_london_youthacks_logo.png";
+import HeroBannerImage from "../../public/images/coolashack5.jpg";
+
+// components
+import Card from "../components/UI_components/eventscard.astro";
+
+// Card Backgrounds
+import CoolAsHack from "../../public/images/coolashackbg.png";
+import Daydream from "../../public/images/clean-bg-with-clouds.png";
+import Scrapyard from "../../public/images/scrapyard-bg.png";
+import Counterspell from "../../public/images/counterspell-bg.png";
+
+// Logos
+import CoolAsHackLogo from  "../../public/images/logos/coolashack.png";
+import DaydreamCambridgeLogo from "../../public/images/logos/daydreamcambridge.png";
+import DaydreamBrightonLogo from "../../public/images/logos/daydreambrighton.png";
+import DaydreamLondonLogo from "../../public/images/logos/daydreamlondon.png";
+import ScrapyardCambridgeLogo from "../../public/images/logos/scrapyardcambridge.png";
+import ScrapyardLondonLogo from "../../public/images/logos/scrapyardlondon.png";
+import CounterspellLogo from "../../public/images/logos/counterspell.png";
 ---
 
+
 <Defualt tab_title="Events - Youthacks">
-    <HeroBanner image_path={HeroBannerImage.src} />
+    <HeroBanner image_path={HeroBannerImage.src} text="<Events>"/>
     <section id="event-section" class="events">
         <div class="container">
-            <h1>Events</h1>
-            <h2>Coming soon! Check out our main page for events we've done.</h2>
+        <h1>Our Past Events</h1>
         </div>
+        <Card img_path={Counterspell.src} logo={CounterspellLogo.src}>
+            <div class = "text-wrapper">
+                <h1>Counterspell Cambridge</h1>
+                <p class="date">27/09/2025</p>
+                <p>A 12-hour game jam hosted at the Raspberry Pi Foundation's headquarters, where young artists, coders and musicians got together to make amazing games together, alongside teens in 50+ cities worldwide in an event coordinated by Hack Club and locally organised by us.</p>
+            </div>  
+        </Card>
+        <Card img_path={Scrapyard.src} logo={ScrapyardLondonLogo.src}>
+            <div class = "text-wrapper">
+                <h1>Scrapyard London</h1>
+                <p class="date">15/03/2025</p>
+                <p>A 12 hour hackathon hosted at tldraw HQ alongside our Cambridge event where teens worked together to create the "scrappiest projects" alongside events from 60+ other cities worldwide in a global event coordinated globally by Hack Club, and organised locally by us.</p>
+            </div>  
+        </Card>
+        <Card img_path={Scrapyard.src} logo={ScrapyardCambridgeLogo.src}>
+            <div class = "text-wrapper">
+                <h1>Scrapyard Cambridge</h1>
+                <p class="date">15/03/2025</p>
+                <p>A 12 hour hackathon hosted at the Raspberry Pi Foundation headquarters where teens worked together to create the "scrappiest projects" alongside events from 60+ other cities worldwide in a global event coordinated globally by Hack Club, and organised locally by us.</p>
+            </div>
+        </Card>
+        <Card img_path={CoolAsHack.src} logo={CoolAsHackLogo.src}>
+            <div class = "text-wrapper">
+                <h1>Cool as Hack</h1>
+                <p class="date">25/04/2025</p>
+                <p>A 12-hour hackathon held at The Raspberry Pi Foundation's headquarters where teens worked together to make cool projects and then submit them to Coolest Projects, an annual global competition for young people to make and submit projects. Co-ordinated and organised by us.</p>
+            </div>  
+        </Card>
+        <h1>Upcoming events</h1>
+        <Card img_path={Daydream.src} logo={DaydreamCambridgeLogo.src}>
+            <div class = "text-wrapper">
+                <h1>Daydream Cambridge</h1>
+                <p class="date">27/09/2025</p>
+                <p>A 12-hour game jam that will be hosted at the Raspberry Pi Foundation's headquarters, where teens will work together to make amazing games, alongside young people in 100+ cities worldwide in an event coordinated by Hack Club and locally organised by us.</p>
+            </div>
+        </Card>
+        <Card img_path={Daydream.src} logo={DaydreamLondonLogo.src}>
+            <div class = "text-wrapper">
+                <h1>Daydream London</h1>
+                <p class="date">27-28/09/2025</p>
+                <p>A 12-hour game jam, where teens will work together to make amazing games, alongside young people in 100+ cities worldwide in an event coordinated by Hack Club and locally organised by us.</p>
+            </div>
+        </Card>
+        <Card img_path={Daydream.src} logo={DaydreamBrightonLogo.src}>
+            <div class = "text-wrapper">
+                <h1>Daydream Brighton</h1>
+                <p class="date">27-28/09/2025</p>
+                <p>A 12-hour game jam, where teens will work together to make amazing games, alongside young people in 100+ cities worldwide in an event coordinated by Hack Club and locally organised by us.</p>
+            </div>
+        </Card>
     </section>
 </Layout></p>
+
+
+<style>
+    h1 {
+      font-family: "Atkinson Hyperlegible", sans-serif;
+      text-align: center;
+      font-size: 3em;
+    }
+</style>

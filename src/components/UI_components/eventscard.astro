@@ -1,0 +1,139 @@
+---
+const { img_path = "" } = Astro.props;
+const { logo = "" } = Astro.props
+---
+
+
+<style>
+    .container {
+      display: grid;
+      min-height: inherit;
+      margin: 2em;
+      grid-template-columns: 1fr 1fr;
+      /*border: 3px solid #a49898;*/
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 8px 8px 36px 0px rgba(0, 0, 0, 0.3);
+      padding: 2em ;
+      /* background-image:url({img_path}); */
+      background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    text-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7) !important;
+    
+     
+    }
+    .container:hover {
+      transition: 0.4s;
+    }
+    .container :global(.wrapper) {
+      height: inherit;
+    }
+  
+    .container :global(h2) {
+      font-family: "Atkinson Hyperlegible", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    .container :global(h1) {
+      font-family: "Atkinson Hyperlegible", sans-serif;
+      font-style: normal;
+      color:white;
+      font-size: 3em;
+      text-align: left;
+      margin-bottom: -0.3em;
+      
+      
+    }
+    .container :global(h3) {
+      font-family: "Atkinson Hyperlegible", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+    .container :global(.date) {
+      font-family: "Atkinson Hyperlegible", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color:white;
+      
+    }
+
+    .container :global(p) {
+      font-family: "Atkinson Hyperlegible", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color:white;
+      text-align: left;
+      
+      
+    }
+
+
+    .container :global(.text-wrapper) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.3em;
+      flex-wrap:wrap;
+      height: inherit;
+      margin-left: 2em;
+      text-align: left;
+    }
+    .container :global(.logo){
+      width:100%;
+      height:auto;
+      margin-right: 2em;
+      transition: 0.5s;
+      filter: drop-shadow(8px 8px 36px rgba(0, 0, 0, 0.4));
+      
+      
+    }
+
+    @media only screen and (max-width: 900px) {
+        .container {
+          grid-template-columns: 1fr;
+          margin-bottom:2em;
+        }
+        .container :global(.text-wrapper) {
+          text-align:center;
+          margin-left: 0;
+        }
+        .container :global(h1) {
+          font-size: 2em;
+        }
+      }
+
+    .container :global(.logo:hover){
+      transform:scale(1.1);
+    }
+
+    /* .container :global(a) {
+      display: flex;
+      width: fit-content;
+      height: fit-content;
+  
+      padding-left: 5em;
+      padding-right: 5em;
+      padding-top: 1em;
+      padding-bottom: 1em;
+  
+      margin-top: 2em;
+  
+      align-items: end;
+  
+      border-radius: 10px;
+      border: 2px solid #3b3a3a;
+      background-color: white;
+  
+      font-family: "Lexend", sans-serif;
+      text-decoration: none;
+    } */
+  </style>
+  
+  <div class="container" style={`background-image: url('${img_path}')`}>
+    <img src={logo} class="logo front">
+    <slot />
+  </div>
+  
