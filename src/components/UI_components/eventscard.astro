@@ -1,6 +1,7 @@
 ---
 const { img_path = "" } = Astro.props;
-const { logo = "" } = Astro.props
+const { logo = "" } = Astro.props;
+const { event_page = "" } = Astro.props
 ---
 
 
@@ -133,7 +134,9 @@ const { logo = "" } = Astro.props
   </style>
   
   <div class="container" style={`background-image: url('${img_path}')`}>
-    <img src={logo} class="logo front">
+    <a href = {event_page}>
+      <img src={logo} class="logo front">
+    </a>
     <slot />
   </div>
   
